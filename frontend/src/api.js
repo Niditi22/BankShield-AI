@@ -1,0 +1,3 @@
+let token='';
+export async function api(path,body){const options={credentials:'same-origin',headers:{'X-CSRF-Token':token}};if(body!==undefined){options.method='POST';if(body instanceof FormData)options.body=body;else{options.headers['Content-Type']='application/json';options.body=JSON.stringify(body)}}const r=await fetch('/api'+path,options);let j;try{j=await r.json()}catch{throw Error('Server response could not be read. Check the Python terminal.')}if(!r.ok)throw Error(j.error||'Request failed');if(path==='/session')token=j.csrf;return j}
+export const date=t=>new Date(t*1000).toLocaleString();

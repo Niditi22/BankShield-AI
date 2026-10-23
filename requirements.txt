@@ -1,0 +1,14 @@
+Flask==3.1.3
+Pillow>=11,<13
+numpy>=2.0,<3
+scipy>=1.14,<2
+opencv-python-headless==4.11.0.86
+waitress==3.0.2
+transformers==4.51.3
+huggingface-hub>=0.30,<1
+safetensors>=0.5,<1
+torch==2.6.0
+torchvision==0.21.0
+pytest>=8,<10
+av>=14,<17
+reportlab>=4.2,<5
